@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen" />
+  <title>Decodificador de Texto - Felipe Franco</title>
+</head>
+
+<body>
+  <div class="container">
+    <section>
+
+      <header>
+        <img src="images/logo-alura.svg" width="31" height="48" class="logo-alura" />
+        <textarea rows="4" cols="50" placeholder="Digite seu texto"></textarea>
+      </header>
+
+      <div class="footer-buttons">
+        <p class="text-format">
+          <img src="./images/bi_exclamation-circle-fill.svg" alt="Info"/>
+          Apenas letras minúsculas e sem acento.
+        </p>
+        <div class="buttons">
+          <button class="filled">
+            Criptografar
+          </button>
+          <button class="transparent-button">
+            Descriptografar
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <sidebar class="sidebar-message">
+
+      <!-- SEM CONTENT -->
+      <div class="sidebar-empty-state">
+        <img src="./images/empty-state.svg" alt="Empty State"/>
+        <p>
+          <strong>Nenhuma mensagem encontrada</strong>
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
+      </div>
+
+      <!-- COM CONTENT -->
+      <div class="sidebar-content" style="display: none;">
+        <div class="input-text-decoding">
+          TESTE CODIGO GIGANTE PARA TESTE TESTE CODIGO GIGANTE PARA TESTE 
+        </div>
+        <button class="transparent-button">
+          Copiar
+        </button>
+      </div>
+    </sidebar>
+  </div>
+</body>
+
+</html>
