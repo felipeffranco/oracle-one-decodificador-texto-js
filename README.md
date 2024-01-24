@@ -1,0 +1,1 @@
+# oracle-one-decodificador-texto-js
