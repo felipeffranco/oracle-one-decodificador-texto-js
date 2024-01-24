@@ -149,7 +149,6 @@ body {
 }
 
 div.container {
-	/* min-width: 1440px; */
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -211,7 +210,7 @@ div.buttons {
 }
 
 div.buttons button {
-	min-width: 280px; 
+	min-width: 328px; 
 	padding: 1.5rem; 
 	border-radius: 1.5rem; 
 	font-size: 1rem;
@@ -325,23 +324,25 @@ sidebar.sidebar-message .sidebar-content button.transparent-button {
 		flex-direction: column;
 		gap: 4rem;
 	}
+	section {
+		height: calc(100vh - 10rem);
+	}
 	section header textarea {
 		margin-left: 0rem;
+		width: calc(652px - 7rem);
 	}
 	div.footer-buttons {
 		margin-left: 0rem;
 	}
 	sidebar.sidebar-message {
 		width: 100%;
-		min-width: 21rem;
-		background-color: var(--white);
-		box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
-		border-radius: 32px;
+		height: 8rem;
 		padding: 2rem;
 	}
 	sidebar.sidebar-message .sidebar-empty-state img {
 		display: none;
 	}
+
 }
 
 
