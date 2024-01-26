@@ -7,38 +7,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen" />
   <title>Decodificador de Texto - Felipe Franco</title>
 </head>
 
 <body>
   
-  <div class="wrapper">
-    <section>
-      <header class="header">
+  <div class="container mx-auto flex flex-col md:flex-row gap-x-16 h-screen">
+    
+    <section class="flex flex-auto flex-col min-h-full">
+      
+      <header class="mt-4 ml-4 mb-20 md:mt-10 md:ml-10 md:mb-20">
         <img src="images/logo-alura.svg" width="31" height="48" class="logo-alura" />
-        <textarea rows="4" cols="25" placeholder="Digite seu texto" class="inputText"></textarea>
       </header>
-      <div class="footer-buttons">
-        <p class="text-format">
-          <img src="./images/bi_exclamation-circle-fill.svg" alt="Info"/>
-          Apenas letras minúsculas e sem acento.
-        </p>
-        <div class="buttons">
-          <button class="filled" onclick="encryptText()">
-            Criptografar
-          </button>
-          <button class="transparent-button" onclick="decryptText()">
-            Descriptografar
-          </button>
+      
+      <div class="flex flex-col content ml-4 md:ml-10 xl:ml-60 h-2/3 justify-between md:h-4/5">
+        <textarea rows="4" placeholder="Digite seu texto" class="textarea flex w-3/4"></textarea>
+        <div class="">
+          <p class="text-format mb-2">
+            <img src="./images/bi_exclamation-circle-fill.svg" alt="Info"/>
+            Apenas letras minúsculas e sem acento.
+          </p>
+          <div class="buttons flex gap-x-2 ">
+            <button onclick="encryptText()" class="filled flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer">
+              Criptografar
+            </button>
+            <button onclick="decryptText()" class="transparent-button flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer">
+              Descriptografar
+            </button>
+          </div>
         </div>
       </div>
+
     </section>
 
-    <sidebar class="sidebar-message">
+    <sidebar class="sidebar-message flex basis-96 my-8">
       <!-- SEM CONTENT -->
-      <div class="sidebar-empty-state full-space">
-        <img src="./images/empty-state.svg" alt="Empty State"/>
+      <div class="sidebar-empty-state" style="display: none;">
+        <img src="./images/empty-state.svg" alt="Empty State" class="hidden md:block"/>
         <p>
           <strong>Nenhuma mensagem encontrada</strong>
           Digite um texto que você deseja criptografar ou descriptografar.
@@ -46,9 +54,9 @@
       </div>
 
       <!-- COM CONTENT -->
-      <div class="sidebar-content buttons" style="display: none;">
+      <div class="sidebar-content buttons flex flex-col justify-between w-full text-2xl text-wrap">
         <div class="input-text-decoding" class="decodedText">
-
+          Teste
         </div>
         <button class="transparent-button" onclick="copyText()">
           Copiar
@@ -57,8 +65,17 @@
     </sidebar>
   </div>
 
-  <footer>
-    <a href="https://www.github.com/felipeffranco">Github Felipe Franco</a>
+
+  <footer class="bg-neutral-200 text-center dark:bg-neutral-700">
+    <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
+      © 2024 Copyright
+      <a
+        class="text-neutral-800 dark:text-neutral-400"
+        href="https://www.github.com/felipeffranco"
+        target="_blank"
+        >Github Felipe Franco</a
+      >
+    </div>
   </footer>
 
 </body>
