@@ -17,7 +17,7 @@
     <section>
       <header class="header">
         <img src="images/logo-alura.svg" width="31" height="48" class="logo-alura" />
-        <textarea rows="4" cols="25" placeholder="Digite seu texto"></textarea>
+        <textarea rows="4" cols="25" placeholder="Digite seu texto" class="inputText"></textarea>
       </header>
       <div class="footer-buttons">
         <p class="text-format">
@@ -25,10 +25,10 @@
           Apenas letras minúsculas e sem acento.
         </p>
         <div class="buttons">
-          <button class="filled">
+          <button class="filled" onclick="encryptText()">
             Criptografar
           </button>
-          <button class="transparent-button">
+          <button class="transparent-button" onclick="decryptText()">
             Descriptografar
           </button>
         </div>
@@ -47,10 +47,10 @@
 
       <!-- COM CONTENT -->
       <div class="sidebar-content buttons" style="display: none;">
-        <div class="input-text-decoding">
-          TESTE CODIGO GIGANTE PARA TESTE TESTE CODIGO GIGANTE PARA TESTE TESTE CODIGO GIGANTE PARA TESTE TESTE CODIGO GIGANTE PARA TESTE 
+        <div class="input-text-decoding" class="decodedText">
+
         </div>
-        <button class="transparent-button">
+        <button class="transparent-button" onclick="copyText()">
           Copiar
         </button>
       </div>
@@ -62,5 +62,5 @@
   </footer>
 
 </body>
-
+  <script src="./js/decode.js"></script>
 </html>
