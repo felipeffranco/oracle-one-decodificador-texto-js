@@ -78,7 +78,6 @@ sidebar.sidebar-message .sidebar-empty-state p {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
-	padding: 2rem;
 	text-align: center;
 	color: var(--color-gray-400);
 	font-size: 1rem;
