@@ -15,22 +15,22 @@
 
 <body>
   
-  <div class="container mx-auto flex flex-col md:flex-row gap-x-16 h-screen">
+  <div class="container mx-auto flex flex-col md:flex-row gap-x-16 h-screen min-w-80">
     
-    <section class="flex flex-auto flex-col min-h-full">
+    <section class="flex flex-auto flex-col">
       
       <header class="mt-4 ml-4 mb-20 md:mt-10 md:ml-10 md:mb-20">
         <img src="images/logo-alura.svg" width="31" height="48" class="logo-alura" />
       </header>
       
-      <div class="flex flex-col content ml-4 md:ml-10 xl:ml-60 h-2/3 justify-between md:h-4/5">
-        <textarea rows="4" placeholder="Digite seu texto" class="textarea flex w-3/4"></textarea>
-        <div class="">
+      <div class="flex flex-col content ml-4 mr-4 md:mr-0 md:ml-10 xl:ml-60 justify-between h-2/3">
+        <textarea rows="4" placeholder="Digite seu texto" class="textarea flex w-full md:w-3/4"></textarea>
+        <div>
           <p class="text-format mb-2">
             <img src="./images/bi_exclamation-circle-fill.svg" alt="Info"/>
             Apenas letras minúsculas e sem acento.
           </p>
-          <div class="buttons flex gap-x-2 ">
+          <div class="buttons flex gap-x-2 flex-col gap-y-6 md:flex-row">
             <button onclick="encryptText()" class="filled flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer">
               Criptografar
             </button>
@@ -43,9 +43,9 @@
 
     </section>
 
-    <sidebar class="sidebar-message flex basis-96 my-8">
+    <sidebar class="sidebar-message flex basis-96 my-10 mx-4 md:mx-0 p-8 h-5/6 mb-20">
       <!-- SEM CONTENT -->
-      <div class="sidebar-empty-state" style="display: none;">
+      <div class="sidebar-empty-state flex flex-col items-center w-full justify-center" style="display: none;">
         <img src="./images/empty-state.svg" alt="Empty State" class="hidden md:block"/>
         <p>
           <strong>Nenhuma mensagem encontrada</strong>
@@ -55,7 +55,7 @@
 
       <!-- COM CONTENT -->
       <div class="sidebar-content buttons flex flex-col justify-between w-full text-2xl text-wrap">
-        <div class="input-text-decoding" class="decodedText">
+        <div class="input-text-decoding decodedText break-all">
           Teste
         </div>
         <button class="transparent-button" onclick="copyText()">
@@ -65,8 +65,7 @@
     </sidebar>
   </div>
 
-
-  <footer class="bg-neutral-200 text-center dark:bg-neutral-700">
+  <footer class="w-full z-[9999] p-2 text-center text-sm text-white bg-black">
     <div class="p-4 text-center text-neutral-700 dark:text-neutral-200">
       © 2024 Copyright
       <a

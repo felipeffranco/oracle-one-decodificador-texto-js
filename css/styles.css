@@ -55,21 +55,10 @@ p.text-format {
 	word-wrap: break-word;
 }
 
-
-
 sidebar.sidebar-message {
 	background-color: var(--white);
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
 	border-radius: 32px;
-	padding: 2rem;
-}
-
-/* SIDEBAR EMPTY STATE */
-sidebar.sidebar-message .sidebar-empty-state {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 sidebar.sidebar-message .sidebar-empty-state img {
@@ -110,7 +99,6 @@ sidebar.sidebar-message .sidebar-content .input-text-decoding {
 
 sidebar.sidebar-message .sidebar-content button.transparent-button {
 	background-color: transparent;
-	min-width: 280px; 
 	padding: 1.5rem; 
 	border-radius: 1.5rem; 
 	font-size: 1rem;
