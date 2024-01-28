@@ -24,17 +24,17 @@
       </header>
       
       <div class="flex flex-col content ml-4 mr-4 md:mr-0 md:ml-10 xl:ml-60 justify-between h-2/3">
-        <textarea rows="4" placeholder="Digite seu texto" class="textarea flex w-full md:w-3/4"></textarea>
+        <textarea rows="4" placeholder="Digite seu texto" id="textInput" class="textarea flex w-full md:w-3/4"></textarea>
         <div>
           <p class="text-format mb-2">
             <img src="./images/bi_exclamation-circle-fill.svg" alt="Info"/>
             Apenas letras minúsculas e sem acento.
           </p>
           <div class="buttons flex gap-x-2 flex-col gap-y-6 md:flex-row">
-            <button onclick="encryptText()" class="filled flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer">
+            <button class="filled flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer" onclick="encrypt()">
               Criptografar
             </button>
-            <button onclick="decryptText()" class="transparent-button flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer">
+            <button class="transparent-button flex p-6 px-28 rounded-3xl text-base justify-center items-centercursor-pointer" onclick="decrypt()">
               Descriptografar
             </button>
           </div>
@@ -45,7 +45,7 @@
 
     <sidebar class="sidebar-message flex basis-96 my-10 mx-4 md:mx-0 p-8 h-5/6 mb-20">
       <!-- SEM CONTENT -->
-      <div class="sidebar-empty-state flex flex-col items-center w-full justify-center" style="display: none;">
+      <div class="sidebar-empty-state flex flex-col items-center w-full justify-center">
         <img src="./images/empty-state.svg" alt="Empty State" class="hidden md:block"/>
         <p>
           <strong>Nenhuma mensagem encontrada</strong>
@@ -54,9 +54,9 @@
       </div>
 
       <!-- COM CONTENT -->
-      <div class="sidebar-content buttons flex flex-col justify-between w-full text-2xl text-wrap">
-        <div class="input-text-decoding decodedText break-all">
-          Teste
+      <div class="sidebar-content buttons flex flex-col justify-between w-full text-2xl text-wrap" style="display: none;">
+        <div class="input-text-decoding decodedText break-all" id="textOutput">
+          
         </div>
         <button class="transparent-button" onclick="copyText()">
           Copiar
